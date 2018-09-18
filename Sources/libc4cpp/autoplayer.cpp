@@ -1,8 +1,6 @@
 #include "autoplayer.h"
 #include <iostream>
 
-
-
 Branch::Branch(Board& b, int move )
     : b_(b)
 {
@@ -144,7 +142,6 @@ int AutoPlayer::maximisePosition(
     }
 
     if (depth == 0) {
-
         return index;
     } else {
         return value;
@@ -176,7 +173,6 @@ int AutoPlayer::minimisePosition(
         if (b.isValid_) {
 
             if (b_.win(player)) {
-
                 score =  -WIN_SCORE;
             } else {
                 if (depth < max_depth) {
@@ -200,4 +196,15 @@ int AutoPlayer::minimisePosition(
 
     // DEBUG("Value=" << value);
     return value;
+}
+
+
+uint8_t AutoPlayer::ply()
+{
+    return max_depth;
+}
+
+void AutoPlayer::setPly( uint8_t p )
+{
+    max_depth = p;
 }

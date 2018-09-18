@@ -1,12 +1,12 @@
 #include "manualplayer.h"
 #include <iostream>
 
-ManualPlayer::ManualPlayer(int colour)
+ManualPlayer::ManualPlayer(player_t colour)
     : Player(colour)
 {
 }
 
-int ManualPlayer::getMove(Board& b)  {
+move_t ManualPlayer::getMove(Board& b)  {
 
     int move;
     bool validMove = false;

@@ -24,6 +24,7 @@ public:
     bool push_counter(
         move_t col,
         bool switch_pl = true);
+        
     void pop_counter();
 
     bool get_last_move(

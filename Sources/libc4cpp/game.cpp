@@ -21,19 +21,15 @@ Game::Game(
 }
 
 Player& Game::getCurrentPlayer()    {
-
     if (b.player == 1)  {
         return p1_;
     } else {
         return p2_;
     }
-
-
 }
 
 
 void Game::showMove(int move)   {
-
     std::cout << std::setw(1 + move * 2) << "|" << std::endl;
     std::cout << std::setw(1 + move * 2) << "v" << std::endl;
 }
@@ -50,7 +46,7 @@ bool Game::startGame()  {
         do  {
             move = getCurrentPlayer().getMove(b);
             std::cout << "move entered = " << move <<std::endl;
-            profile::print();
+           
         } while ( !  b.push_counter(move,false) );
 
         showMove(move);

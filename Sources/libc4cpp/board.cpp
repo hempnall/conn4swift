@@ -21,7 +21,6 @@ Board::Board()
     : player(1),debug_(false)
 {
     memset( board ,0, 42 * sizeof(player_t));
-
 }
 
 
