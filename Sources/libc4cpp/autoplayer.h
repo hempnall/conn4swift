@@ -31,8 +31,6 @@ public:
     uint8_t ply();
     void setPly( uint8_t p );
 
-
-
 };
 
 #endif // AUTOPLAYER_H

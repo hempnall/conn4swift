@@ -2,6 +2,8 @@
 #include "manualplayer.h"
 #include "autoplayer.h"
 #include "game.h"
+#include <iostream>
+
 #define NULLPTR 0
 
 void* new_game( void* player1 , void* player2 )
@@ -58,4 +60,12 @@ void delete_player( void* p )
         Player *player = static_cast<Player*>(p);
         delete player;
     }
+}
+
+
+void callback( cb_t fn )
+{
+    std::cout << "1) in c++ \n";
+    fn();
+    std::cout << "2) in c++ \n";
 }

@@ -4,7 +4,6 @@
 Branch::Branch(Board& b, int move )
     : b_(b)
 {
-
     isValid_ =  b.push_counter(move);
 }
 
