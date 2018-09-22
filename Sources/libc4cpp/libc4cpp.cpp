@@ -63,9 +63,10 @@ void delete_player( void* p )
 }
 
 
-void callback( cb_t fn )
-{
-    std::cout << "1) in c++ \n";
-    fn();
-    std::cout << "2) in c++ \n";
-}
+// void callback( cb_t fn )
+// {
+//     std::cout << "1) in c++ \n";
+//     uint8_t n = fn();
+//     std::cout << "2) in c++ \n";
+//     std::cout << "the number is " << (uint16_t) n << std::endl;
+// }

@@ -11,7 +11,7 @@ final class conn4Tests: XCTestCase {
     }
 
     func testAdd() {
-        conn4().add( x: 123 , y : 132)
+      //  conn4().add( x: 123 , y : 132)
       //  XCTAssertEqual( conn4().add( x:67 , y:33 ) , 33)
     }
 
