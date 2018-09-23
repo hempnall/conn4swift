@@ -14,6 +14,7 @@ public:
     Game(Player& p1,Player& p2);
     Game(Player* p1, Player* p2);
     Game(Board& b, Player& p1 , Player& p2);
+    
     bool startGame();
     void showMove(int move);
 };

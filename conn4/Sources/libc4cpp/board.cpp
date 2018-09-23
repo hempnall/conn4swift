@@ -8,6 +8,7 @@ Board::Board(move_t* p, size_t c)
     : player(1),debug_(false)
 {
     memset( board ,0, 42 * sizeof(player_t));
+    memset( colheights , 0 , 7 * sizeof(height_t));
     std::vector<int> moves(p,p+c);
 
     for (auto& i : moves) {
@@ -21,6 +22,7 @@ Board::Board()
     : player(1),debug_(false)
 {
     memset( board ,0, 42 * sizeof(player_t));
+    memset( colheights , 0 , 7 * sizeof(height_t));
 }
 
 
@@ -58,10 +60,12 @@ void Board::pop_counter()   {
 
 
 std::ostream& operator<< (std::ostream& ostr, const Board& b)  {
-    for (height_t row=5;row>=0;row--)    {
+    for (height_t row=0;row<6;++row)    {
         //# draw board upside down
+        height_t actual_row = 5 - row;
         for (move_t col=0;col < 7;++col)   {
-            ostr <<  b.board[col][row] << " ";
+           int16_t bc = b.board[col][actual_row];
+           ostr <<  bc << " ";
         }
         ostr << std::endl;
     }

@@ -9,7 +9,7 @@ public:
     int colour_;
 
     Player(int colour);
-    virtual ~Player() = 0;
+    virtual ~Player() {};
     virtual move_t getMove(Board& b) = 0;
 };
 

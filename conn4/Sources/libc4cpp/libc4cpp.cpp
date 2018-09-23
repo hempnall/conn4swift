@@ -11,7 +11,7 @@ void* new_game( void* player1 , void* player2 )
     Player *p1 = static_cast<Player*>(player1);
     Player *p2 = static_cast<Player*>(player2);
     Game* g = new Game(*p1,*p2);
-    return 0;
+    return g;
 }
 
 void start_game( void* g )

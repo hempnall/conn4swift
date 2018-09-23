@@ -54,7 +54,6 @@ bool Game::startGame()  {
         do  {
             move = getCurrentPlayer().getMove(b);
             std::cout << "move entered = " << move <<std::endl;
-           
         } while ( !  b.push_counter(move,false) );
 
         showMove(move);

@@ -6,7 +6,7 @@ public class ManualPlayer
 
     let player_handle_ : UnsafeMutableRawPointer 
     
-    init(colour: UInt8) {
+    public init(colour: UInt8) {
         print("manualplayer is being initialized")
         self.player_handle_ = new_manual_player(colour)
     }
@@ -14,12 +14,16 @@ public class ManualPlayer
     deinit {
         print("manualplayer is being deinitialized")
         delete_player( self.player_handle_ )
-       // self.player_handle_ = nil
     }
 
-    func get_move() -> UInt8 
+    public func get_move() -> UInt8 
     {
         return 3
+    }
+
+    public func handle() -> UnsafeMutableRawPointer
+    {
+        return self.player_handle_
     }
 
 }
