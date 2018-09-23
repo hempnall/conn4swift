@@ -7,6 +7,7 @@ class ManualPlayer : public Player
 {
 public:
     ManualPlayer(player_t colour);
+    ~ManualPlayer() {}
     move_t getMove(Board& b);
 };
 

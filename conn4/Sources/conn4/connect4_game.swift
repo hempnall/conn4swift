@@ -1,6 +1,6 @@
 import libc4cpp 
 
-public struct Connect4Game {
+public class Connect4Game {
 
     init() {
 

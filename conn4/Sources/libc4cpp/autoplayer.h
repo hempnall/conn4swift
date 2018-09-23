@@ -27,6 +27,7 @@ class AutoPlayer : public Player
 
 public:
     AutoPlayer(player_t colour,int max_ply);
+    ~AutoPlayer() {}
     virtual move_t getMove(Board& b);
     uint8_t ply();
     void setPly( uint8_t p );

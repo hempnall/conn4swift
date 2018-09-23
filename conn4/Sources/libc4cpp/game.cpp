@@ -12,6 +12,14 @@ Game::Game(
 }
 
 Game::Game(
+        Player* p1,
+        Player* p2
+        )
+    : p1_(*p1),p2_(*p2)
+{
+}
+
+Game::Game(
         Board& board,
         Player& p1,
         Player& p2
@@ -57,5 +65,5 @@ bool Game::startGame()  {
         std::cout << b;
 
     }
-
+    return true;
 }
