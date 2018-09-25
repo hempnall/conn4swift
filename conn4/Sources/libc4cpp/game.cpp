@@ -37,7 +37,7 @@ Player& Game::getCurrentPlayer()    {
 }
 
 
-void Game::showMove(int move)   {
+void Game::showMove(move_t move)   {
     std::cout << std::setw(1 + move * 2) << "|" << std::endl;
     std::cout << std::setw(1 + move * 2) << "v" << std::endl;
 }
@@ -66,3 +66,4 @@ bool Game::startGame()  {
     }
     return true;
 }
+

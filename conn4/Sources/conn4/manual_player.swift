@@ -16,9 +16,21 @@ public class ManualPlayer
         delete_player( self.player_handle_ )
     }
 
-    public func get_move() -> UInt8 
+    public func get_move( b : Board ) -> UInt8 
     {
-        return 3
+        print("[SWIFT] please enter your move (0-6):")
+        guard let move_chosen = readLine(strippingNewline: true) else {
+            // If we got to here, readLine(strippingNewLine:) returned nil
+            fatalError("Received EOF before any input was given")
+        }
+
+        // If we got to here, then userInput is not nil
+        if let n  = UInt8(move_chosen)  {
+            return n
+        }
+        else {
+            return 10
+        }
     }
 
     public func handle() -> UnsafeMutableRawPointer

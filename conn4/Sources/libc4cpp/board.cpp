@@ -61,7 +61,6 @@ void Board::pop_counter()   {
 
 std::ostream& operator<< (std::ostream& ostr, const Board& b)  {
     for (height_t row=0;row<6;++row)    {
-        //# draw board upside down
         height_t actual_row = 5 - row;
         for (move_t col=0;col < 7;++col)   {
            int16_t bc = b.board[col][actual_row];
@@ -155,7 +154,6 @@ bool Board::get_last_move(move_t& col, height_t& row) {
 }
 
 bool Board::win(player_t plyr)    {
-
     move_t col = 0;
     height_t row = 0;
 
@@ -164,11 +162,11 @@ bool Board::win(player_t plyr)    {
     }
 
     return win(col,row,plyr);
-
 }
 
 void Board::switch_player() {
     player = 3 - player;
 }
+
 
 

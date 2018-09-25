@@ -6,6 +6,7 @@
 #include <map>
 #include "c4types.h"
 
+
 class Board
 {
     int colheights[7];

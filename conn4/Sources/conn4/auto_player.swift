@@ -18,7 +18,7 @@ public class AutoPlayer
         print("autoplayer is being deinitialized")
     }
 
-    public func get_move() -> UInt8 
+    public func get_move( b : Board) -> UInt8 
     {
         return 3
     }

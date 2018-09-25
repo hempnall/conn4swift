@@ -16,7 +16,7 @@ public:
     Game(Board& b, Player& p1 , Player& p2);
     
     bool startGame();
-    void showMove(int move);
+    void showMove(move_t move);
 };
 
 #endif // GAME_H

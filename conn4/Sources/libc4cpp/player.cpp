@@ -4,3 +4,4 @@ Player::Player(int colour)
     : colour_(colour)
 {
 }
+

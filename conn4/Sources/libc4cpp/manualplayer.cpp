@@ -22,3 +22,4 @@ move_t ManualPlayer::getMove(Board& b)  {
     return move;
 
 }
+

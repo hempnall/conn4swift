@@ -1,5 +1,5 @@
 public protocol Player 
     : HandleObject
 {
-    func get_move() -> UInt8
+    func get_move( b : Board) -> UInt8
 }

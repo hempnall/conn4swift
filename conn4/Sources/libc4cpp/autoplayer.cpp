@@ -207,3 +207,5 @@ void AutoPlayer::setPly( uint8_t p )
 {
     max_depth = p;
 }
+
+
