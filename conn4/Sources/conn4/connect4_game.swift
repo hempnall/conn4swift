@@ -31,7 +31,6 @@ public class Connect4Game
 
     func show_move( m : UInt8 )
     {
-        print("show move \(m)")
         game_show_move(  self.game_handle_ , m )
     }
 
@@ -43,7 +42,6 @@ public class Connect4Game
         } else {
             return self.p2_
         }
-
     }
 
     public func start_game() 

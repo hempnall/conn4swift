@@ -132,7 +132,16 @@ void game_show_move( void* g, uint8_t m)
     }   
 }
 
-
+uint8_t auto_player_get_move( void* player , void* board  )
+{
+     if ( board != NULLPTR && player != NULLPTR) {
+        Board* bd = static_cast<Board*>(board);
+        Player* pl = static_cast<Player*>(player);
+        uint8_t move = pl->getMove( *bd );
+        return move;
+    }      
+    return 100;
+}
 
 
 

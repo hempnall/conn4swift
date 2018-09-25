@@ -15,6 +15,7 @@ void* new_auto_player( uint8_t colour, uint8_t maxply);
 void* new_manual_player( uint8_t colour);
 void auto_player_set_ply( uint8_t maxply );
 uint8_t auto_player_get_ply();
+uint8_t auto_player_get_move( void* player , void* board  );
 void delete_player( void* );
 
 void delete_board( void* );

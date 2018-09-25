@@ -33,13 +33,9 @@ move_t move_order[] = { 3,4,2,5,1,6,0 };
 move_t AutoPlayer::getMove(Board& b)
 {
 
-    std::cout << "getting move for " << b.player << std::endl;
-
     int alpha = -MIN_SCORE;
     int beta = MIN_SCORE;
     int index =  maximisePosition(b,0,alpha,beta);
-
-    std::cout << "move chosen: " << index << std::endl;
 
     return index;
     int move = 0 ;

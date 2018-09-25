@@ -20,7 +20,9 @@ public class AutoPlayer
 
     public func get_move( b : Board) -> UInt8 
     {
-        return 3
+        let mov = auto_player_get_move( self.handle_ , b.handle()  )
+        print("[SWIFT] computer choses \(mov)")
+        return mov
     }
 
     public func handle() -> UnsafeMutableRawPointer
